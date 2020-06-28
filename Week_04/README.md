@@ -71,7 +71,7 @@ def bfs(graph, start, end):
 
 ```
 
->二分
+>二分模版
 
 ```
 left, right = 0, len(array)-1
@@ -84,5 +84,11 @@ while left <= right:
         left = mid + 1
     else:
         right = mid - 1
+```
 
+>习题
+
+```
+- 使用二分查找，寻找一个半有序数组 [4, 5, 6, 7, 0, 1, 2] 中间无序的地方
+思路：先找到中间位置的值mid，在使用左右指针分别指向mid的最左和最右边，每次判断mid与left，right的值大小，如果left > mid && right > mid,那么mid赋给right，如果left < mid && right < mid ,mid赋给left,依次类推，最后找到的两个值为中间无序的部分
 ```
